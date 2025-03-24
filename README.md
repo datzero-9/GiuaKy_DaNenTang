@@ -1,12 +1,34 @@
-# React + Vite
+B1: tạo 2 file này
+ 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+{
+    "appId": "io.ionic.todolist",
+    "appName": "todolist",
+    "webDir": "dist",
+    "bundleWebRunTime": false,
+    "npmClient": "npm",
+    "server": {
+      "androidScheme": "https"
+    }
+  }
 
-Currently, two official plugins are available:
+{
+    "name": "todolist",
+    "intergrations": {
+      "capacitor": {}
+    },
+    "type": "react"
+  }
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+B2 : thực hiện
+npm i @capacitor/core
+npm i -D @capacitor/cli
+npx cap init
+npm i @capacitor/android @capacitor/ios
+npx cap add android
+npx cap add ios
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+sau khi sửa code hay gì đó thì phải chạy lại 3 lệnh này
+npm run build
+npx cap sync
+npx cap open android
