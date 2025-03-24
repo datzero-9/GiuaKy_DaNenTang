@@ -1,0 +1,15 @@
+{
+  "appId": "io.ionic.lab1",
+  "appName": "lab1",
+  "webDir": "dist",
+  "bundleWebRunTime": false,
+  "npmClient": "npm",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "permissions": [
+      "ACCESS_FINE_LOCATION"
+    ]
+  }
+}
